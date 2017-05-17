@@ -9,45 +9,39 @@ import main.CheckPalindrome;
 public class CheckPalindromeTest {
 
 	private String inputString;
-	private boolean result;
-
-	private boolean checkPalindrome() {
-		result = CheckPalindrome.checkPalindrome(inputString);
-		return result;
-	}
 
 	@Test
 	public void shouldReturnTrueWhenOneLetterString() {
 		inputString = "a";
-		result = checkPalindrome();
+		boolean result = CheckPalindrome.checkPalindrome(inputString);
 		assertEquals(true, result);
 	}
 
 	@Test
 	public void shouldReturnFalseWhenInitialLetterDoesNotMatchLastLetter() {
 		inputString = "abc";
-		result = checkPalindrome();
+		boolean result = CheckPalindrome.checkPalindrome(inputString);
 		assertEquals(false, result);
 	}
 
 	@Test
 	public void shouldReturnFalseWhenInitialTwoLettersDoNotMatchLastTwoLetters() {
 		inputString = "abab";
-		result = checkPalindrome();
+		boolean result = CheckPalindrome.checkPalindrome(inputString);
 		assertEquals(false, result);
 	}
 
 	@Test
 	public void shouldReturnTrueWhenLongPalindrome() {
 		inputString = "abcdefgfedcba";
-		result = checkPalindrome();
+		boolean result = CheckPalindrome.checkPalindrome(inputString);
 		assertEquals(true, result);
 	}
 
 	@Test
 	public void shouldReturnTrueNoMatterLetterCaseOfPalindrome() {
 		inputString = "AbcDedCBa";
-		result = checkPalindrome();
+		boolean result = CheckPalindrome.checkPalindrome(inputString);
 		assertEquals(true, result);
 	}
 
