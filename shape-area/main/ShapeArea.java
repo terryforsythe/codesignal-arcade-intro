@@ -3,7 +3,12 @@ package main;
 public class ShapeArea {
 
 	public static int shapeArea(int n) {
-		return 1;
-	}
 
+		if (n > 1) {
+			return (n * n) + ((n-1)*(n-1));
+		}
+
+		return n;
+
+	}
 }
