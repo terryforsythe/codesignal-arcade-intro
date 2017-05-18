@@ -8,11 +8,11 @@ import main.AdjacentElementsProduct;
 
 public class AdjacentElementsProductTest {
 
-	int[] inputArray = { 5, 7, -3, -7, 9, 4 };
+	int[] inputArray = { 5, 7, -3, 9, 4, -7 };
 	int adjacentElementsProduct = AdjacentElementsProduct.adjacentElementsProduct(inputArray);
 
 	@Test
-	public void shouldMultiplyElementFourByRightElementAndReassignProductAs36() {
+	public void shouldMultiplyElementThreeByRightElementAndReassignProductAs36() {
 		int result = adjacentElementsProduct;
 		assertEquals(36, result);
 	}
