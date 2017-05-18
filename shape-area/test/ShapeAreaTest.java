@@ -1,10 +1,8 @@
 package test;
 
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Test;
-
 import main.ShapeArea;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 public class ShapeAreaTest {
 
