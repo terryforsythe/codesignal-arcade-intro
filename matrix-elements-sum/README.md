@@ -13,7 +13,7 @@ For
               [0, 5, 0, 0],
               [2, 0, 3, 3]]
           
-the output should be `matrixElementsSum(matrix) = 9.`
+the output should be `matrixElementsSum(matrix) = 9`.
 
 Here's the rooms matrix with unsuitable rooms marked with 'x':
 
