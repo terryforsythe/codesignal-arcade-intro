@@ -23,5 +23,6 @@ Here's the rooms matrix with unsuitable rooms marked with 'x':
 
 `[[x, 1, 1, 2],`<br>
  &nbsp; `[x, 5, x, x],` <br> 
- &nbsp; `[x, x, x, x]]`
+ &nbsp; `[x, x, x, x]]` <br>
+ 
 Thus, the answer is 1 + 5 + 1 + 2 = 9.
