@@ -11,18 +11,16 @@ Help the bots calculate the total price of all the rooms that are suitable for t
 
 For
 
-`matrix:`<br> 
-`[[0, 1, 1, 2],` <br>
-&nbsp; `[0, 5, 0, 0],` <br>
-&nbsp; `[2, 0, 3, 3]]`
+    matrix = [[0, 1, 1, 2],
+              [0, 5, 0, 0],
+              [2, 0, 3, 3]]
           
-the output should be <br>
-`matrixElementsSum(matrix) = 9.`
+the output should be `matrixElementsSum(matrix) = 9.`
 
 Here's the rooms matrix with unsuitable rooms marked with 'x':
 
-`[[x, 1, 1, 2],`<br>
- &nbsp; `[x, 5, x, x],` <br> 
- &nbsp; `[x, x, x, x]]` <br>
+    [[x, 1, 1, 2],
+     [x, 5, x, x],
+     [x, x, x, x]]
  
 Thus, the answer is 1 + 5 + 1 + 2 = 9.
