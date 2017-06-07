@@ -5,7 +5,7 @@ After becoming famous, CodeBots decided to move to a new building and live toget
 
 Help the bots calculate the total price of all the rooms that are suitable for them.
 
------
+---
 
 ##### Example
 
