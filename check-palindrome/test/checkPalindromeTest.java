@@ -1,5 +1,6 @@
 package test;
 
+
 import main.CheckPalindrome;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;

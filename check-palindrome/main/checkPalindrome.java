@@ -1,5 +1,6 @@
 package main;
 
+
 public class CheckPalindrome {
 
 	public static boolean checkPalindrome(String inputString) {
