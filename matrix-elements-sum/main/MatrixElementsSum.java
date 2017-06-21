@@ -11,18 +11,16 @@ public class MatrixElementsSum {
 
 				int matrixIndex = matrix[rowIndex][columnIndex];
 
-				if (rowIndex != matrix.length - 1 && matrixIndex == 0) {
+				if (matrixIndex == 0 && rowIndex != matrix.length - 1) {
 					matrix[rowIndex + 1][columnIndex] = 0;
 				}
 
 				matrixSum += matrixIndex;
 
 			}
-
 		}
 
 		return matrixSum;
 
 	}
-
 }
