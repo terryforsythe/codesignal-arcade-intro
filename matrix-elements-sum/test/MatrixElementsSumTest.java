@@ -14,17 +14,17 @@ public class MatrixElementsSumTest {
 	}
 
 	@Test
-	public void shouldNotSumColumnIfFirstElementIsZero() {
-		int[][] matrix = { { 0, 1, 3 }, { 2, 2, 2 }, { 2, 2, 2 } };
+	public void shouldNotSumAnyColumnIfFirstElementIsZero() {
+		int[][] matrix = { { 0, 1, 3 }, { 0, 2, 3 }, { 0, 2, 2 } };
 		int result = MatrixElementsSum.matrixElementsSum(matrix);
-		assertEquals(12, result);
+		assertEquals(13, result);
 	}
-	
-//	@Test
-//	public void shouldNotSumRestOfColumnIfThirdElementIsZero() {
-//		int[][] matrix = {{1,2,0,4,5},{1,2,0,4,5},{1,2,0,4,5}};
-//		int result = MatrixElementsSum.matrixElementsSum(matrix);
-//		assertEquals(9, result);
-//	}
+
+	@Test
+	public void shouldNotSumRestOfColumnsIfSecondElementIsZero() {
+		int[][] matrix = { { 1, 1, 3, 4, 5 }, { 0, 0, 0, 0, 0 }, { 2, 0, 4, 5, 6 } };
+		int result = MatrixElementsSum.matrixElementsSum(matrix);
+		assertEquals(14, result);
+	}
 
 }

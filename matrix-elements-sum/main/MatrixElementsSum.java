@@ -7,18 +7,18 @@ public class MatrixElementsSum {
 		int matrixSum = 0;
 
 		for (int rowIndex = 0; rowIndex < matrix.length; rowIndex++) {
-			for (int columnIndex = 0; columnIndex < matrix[rowIndex].length; columnIndex++) {
+			for (int columnIndex = 0; columnIndex < matrix[0].length; columnIndex++) {
 
 				int matrixIndex = matrix[rowIndex][columnIndex];
 
-				if (matrixIndex == 0 && matrixIndex != matrix[matrix.length - 1][columnIndex]) {
+				if (rowIndex != matrix.length - 1 && matrixIndex == 0) {
 					matrix[rowIndex + 1][columnIndex] = 0;
 				}
 
-				else if (matrixIndex != 0) {
-					matrixSum += matrixIndex;
-				}
+				matrixSum += matrixIndex;
+
 			}
+
 		}
 
 		return matrixSum;
