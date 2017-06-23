@@ -15,7 +15,8 @@ public class AllLongestStrings {
 			String element = inputArray[index];
 
 			if (element.length() > longestStrings.get(0).length()) {
-				longestStrings.set(0, element);
+				longestStrings.clear();
+				longestStrings.add(element);
 			}
 
 			else if (element.length() == longestStrings.get(0).length()) {

@@ -15,8 +15,8 @@ public class AllLongestStringsTest {
 	}
 
 	@Test
-	public void shouldReturnLongestString() {
-		String[] inputArray = { "abc", "efgh", "abcdefg", "cba", "tuvwxyz" };
+	public void shouldReturnLongestStrings() {
+		String[] inputArray = { "abc", "efgh", "fghi", "abcdefg", "cba", "tuvwxyz" };
 		String[] expected = { "abcdefg", "tuvwxyz" };
 		String[] result = AllLongestStrings.allLongestStrings(inputArray);
 		assertArrayEquals(expected, result);
