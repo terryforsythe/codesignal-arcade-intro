@@ -5,7 +5,7 @@ Ticket numbers usually consist of an even number of digits. A ticket number is c
 
 Given a ticket number n, determine if it's lucky or not.
 
-##### Example
+##### Examples
 
 * For n = 1230, the output should be
 isLucky(n) = true;
