@@ -6,25 +6,26 @@ import static org.junit.Assert.assertEquals;
 
 public class MatrixElementsSumTest {
 
+	private int matrixResult(int[][] matrix) {
+		return MatrixElementsSum.matrixElementsSum(matrix);
+	}
+
 	@Test
 	public void shouldSumAllElementsWhenNoZerosOccur() {
 		int[][] matrix = { { 1, 1, 1 }, { 2, 2, 2 }, { 3, 3, 3 } };
-		int result = MatrixElementsSum.matrixElementsSum(matrix);
-		assertEquals(18, result);
+		assertEquals(18, matrixResult(matrix));
 	}
 
 	@Test
 	public void shouldNotSumAnyColumnIfFirstElementIsZero() {
 		int[][] matrix = { { 0, 1, 3 }, { 0, 2, 3 }, { 0, 2, 2 } };
-		int result = MatrixElementsSum.matrixElementsSum(matrix);
-		assertEquals(13, result);
+		assertEquals(13, matrixResult(matrix));
 	}
 
 	@Test
 	public void shouldNotSumRestOfColumnsIfSecondElementIsZero() {
 		int[][] matrix = { { 1, 1, 3, 4, 5 }, { 0, 0, 0, 0, 0 }, { 2, 0, 4, 5, 6 } };
-		int result = MatrixElementsSum.matrixElementsSum(matrix);
-		assertEquals(14, result);
+		assertEquals(14, matrixResult(matrix));
 	}
 
 }

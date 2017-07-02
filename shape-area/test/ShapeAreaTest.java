@@ -7,34 +7,33 @@ import static org.junit.Assert.assertEquals;
 public class ShapeAreaTest {
 
 	int n;
-	int result;
+
+	private int shapeAreaResult() {
+		return ShapeArea.shapeArea(this.n);
+	}
 
 	@Test
 	public void shouldReturnAreaForPolygonOneAs1() {
 		n = 1;
-		result = ShapeArea.shapeArea(n);
-		assertEquals(1, result);
+		assertEquals(1, shapeAreaResult());
 	}
 
 	@Test
 	public void shouldReturnAreaForPolygonTwoAs5() {
 		n = 2;
-		result = ShapeArea.shapeArea(n);
-		assertEquals(5, result);
+		assertEquals(5, shapeAreaResult());
 	}
 
 	@Test
 	public void shouldReturnAreaForPolygonThreeAs13() {
 		n = 3;
-		result = ShapeArea.shapeArea(n);
-		assertEquals(13, result);
+		assertEquals(13, shapeAreaResult());
 	}
 
 	@Test
 	public void shouldReturnAreaForPolygonFiveAs41() {
 		n = 5;
-		result = ShapeArea.shapeArea(n);
-		assertEquals(41, result);
+		assertEquals(41, shapeAreaResult());
 	}
 
 }
