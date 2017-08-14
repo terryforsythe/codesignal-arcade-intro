@@ -1,8 +1,11 @@
 package test;
 
-import main.AllLongestStrings;
-import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
+
+import org.junit.Test;
+
+import main.AllLongestStrings;
+
 
 public class AllLongestStringsTest {
 
