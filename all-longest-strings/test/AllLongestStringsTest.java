@@ -1,6 +1,8 @@
 package test;
 
-import static org.junit.Assert.assertArrayEquals;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
@@ -14,7 +16,7 @@ public class AllLongestStringsTest {
 		String[] inputArray = { "abc", "cde", "efg" };
 		String[] expected = inputArray;
 		String[] result = AllLongestStrings.allLongestStrings(inputArray);
-		assertArrayEquals(expected, result);
+		assertThat(result, is(equalTo(expected)));
 	}
 
 	@Test
@@ -22,7 +24,7 @@ public class AllLongestStringsTest {
 		String[] inputArray = { "abc", "efgh", "fghi", "abcdefg", "cba", "tuvwxyz" };
 		String[] expected = { "abcdefg", "tuvwxyz" };
 		String[] result = AllLongestStrings.allLongestStrings(inputArray);
-		assertArrayEquals(expected, result);
+		assertThat(result, is(equalTo(expected)));
 	}
 
 }

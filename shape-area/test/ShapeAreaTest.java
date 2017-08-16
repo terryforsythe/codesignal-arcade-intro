@@ -1,8 +1,11 @@
 package test;
 
-import main.ShapeArea;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+
+import main.ShapeArea;
 
 public class ShapeAreaTest {
 
@@ -15,25 +18,25 @@ public class ShapeAreaTest {
 	@Test
 	public void shouldReturnAreaForPolygonOneAs1() {
 		n = 1;
-		assertEquals(1, shapeAreaResult());
+		assertThat(shapeAreaResult(), is(1));
 	}
 
 	@Test
 	public void shouldReturnAreaForPolygonTwoAs5() {
 		n = 2;
-		assertEquals(5, shapeAreaResult());
+		assertThat(shapeAreaResult(), is(5));
 	}
 
 	@Test
 	public void shouldReturnAreaForPolygonThreeAs13() {
 		n = 3;
-		assertEquals(13, shapeAreaResult());
+		assertThat(shapeAreaResult(), is(13));
 	}
 
 	@Test
 	public void shouldReturnAreaForPolygonFiveAs41() {
 		n = 5;
-		assertEquals(41, shapeAreaResult());
+		assertThat(shapeAreaResult(), is(41));
 	}
 
 }

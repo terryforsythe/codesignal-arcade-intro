@@ -1,6 +1,7 @@
 package test;
 
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
@@ -19,35 +20,35 @@ public class CommonCharacterCountTest {
 	public void shouldMatchSingleCommonCharacterInBothStringsAndReturnCountAs1() {
 		string1 = "abcd";
 		string2 = "defg";
-		assertEquals(1, countResult());
+		assertThat(countResult(), is(1));
 	}
 
 	@Test
 	public void shouldMatchTwoCommonCharactersInBothStringsAndReturnCountAs2() {
 		string1 = "acbc";
 		string2 = "cdecf";
-		assertEquals(2, countResult());
+		assertThat(countResult(), is(2));
 	}
 
 	@Test
 	public void shouldMatchThreeCommonCharactersInBothStringsWhenStringHasExtraCommonCharacters() {
 		string1 = "aaadddhhh";
 		string2 = "adh";
-		assertEquals(3, countResult());
+		assertThat(countResult(), is(3));
 	}
 
 	@Test
 	public void shouldMatchCommonCharactersInBothStringsWhenStringsHaveNoLogicalOrder() {
 		string1 = "dehxggyz";
 		string2 = "gkadcgfh";
-		assertEquals(4, countResult());
+		assertThat(countResult(), is(4));
 	}
 
 	@Test
 	public void shouldReturnCountNoMatterCharacterCase() {
 		string1 = "ABCD";
 		string2 = "abcd";
-		assertEquals(4, countResult());
+		assertThat(countResult(), is(4));
 	}
 
 }

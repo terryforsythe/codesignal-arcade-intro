@@ -1,9 +1,11 @@
 package test;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
+import org.junit.Test;
 
 import main.CheckPalindrome;
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
 
 public class CheckPalindromeTest {
 
@@ -12,36 +14,35 @@ public class CheckPalindromeTest {
 	private boolean result() {
 		return CheckPalindrome.checkPalindrome(this.inputString);
 	}
-	
+
 	@Test
 	public void shouldReturnTrueWhenOneLetterString() {
 		inputString = "a";
-		assertEquals(true, result());
+		assertThat(result(), is(true));
 	}
-
 
 	@Test
 	public void shouldReturnFalseWhenInitialLetterDoesNotMatchLastLetter() {
 		inputString = "abc";
-		assertEquals(false, result());
+		assertThat(result(), is(false));
 	}
 
 	@Test
 	public void shouldReturnFalseWhenInitialTwoLettersDoNotMatchLastTwoLetters() {
 		inputString = "abab";
-		assertEquals(false, result());
+		assertThat(result(), is(false));
 	}
 
 	@Test
 	public void shouldReturnTrueWhenLongPalindrome() {
 		inputString = "abcdefgfedcba";
-		assertEquals(true, result());
+		assertThat(result(), is(true));
 	}
 
 	@Test
 	public void shouldReturnTrueNoMatterLetterCaseOfPalindrome() {
 		inputString = "AbcDedCBa";
-		assertEquals(true, result());
+		assertThat(result(), is(true));
 	}
 
 }

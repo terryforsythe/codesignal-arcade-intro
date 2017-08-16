@@ -1,6 +1,7 @@
 package test;
 
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
@@ -12,7 +13,7 @@ public class AdjacentElementsProductTest {
 	public void shouldMultiplyElementThreeByRightElementAndReassignProductAs36() {
 		int[] inputArray = { 5, 7, -3, 9, 4, -7 };
 		int result = AdjacentElementsProduct.adjacentElementsProduct(inputArray);
-		assertEquals(36, result);
+		assertThat(result, is(36));
 	}
 
 }

@@ -1,6 +1,7 @@
 package test;
 
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
@@ -12,7 +13,7 @@ public class MakeArrayConsecutiveTest {
 	public void shouldReturn2ForNumberOfMissingStatues() {
 		int[] statues = { 6, 5, 3, 9, 8 };
 		int result = MakeArrayConsecutive.makeArrayConsecutive(statues);
-		assertEquals(2, result);
+		assertThat(result, is(2));
 	}
 
 }

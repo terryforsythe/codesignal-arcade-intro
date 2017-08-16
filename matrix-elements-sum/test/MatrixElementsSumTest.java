@@ -1,8 +1,11 @@
 package test;
 
-import main.MatrixElementsSum;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+
+import main.MatrixElementsSum;
 
 public class MatrixElementsSumTest {
 
@@ -13,19 +16,19 @@ public class MatrixElementsSumTest {
 	@Test
 	public void shouldSumAllElementsWhenNoZerosOccur() {
 		int[][] matrix = { { 1, 1, 1 }, { 2, 2, 2 }, { 3, 3, 3 } };
-		assertEquals(18, matrixResult(matrix));
+		assertThat(matrixResult(matrix), is(18));
 	}
 
 	@Test
 	public void shouldNotSumAnyColumnIfFirstElementIsZero() {
 		int[][] matrix = { { 0, 1, 3 }, { 0, 2, 3 }, { 0, 2, 2 } };
-		assertEquals(13, matrixResult(matrix));
+		assertThat(matrixResult(matrix), is(13));
 	}
 
 	@Test
 	public void shouldNotSumRestOfColumnsIfSecondElementIsZero() {
 		int[][] matrix = { { 1, 1, 3, 4, 5 }, { 0, 0, 0, 0, 0 }, { 2, 0, 4, 5, 6 } };
-		assertEquals(14, matrixResult(matrix));
+		assertThat(matrixResult(matrix), is(14));
 	}
 
 }
