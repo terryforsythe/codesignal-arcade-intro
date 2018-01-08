@@ -5,7 +5,6 @@ Given an array of integers, find the pair of adjacent elements that has the larg
 
 ##### Example
 
-For inputArray = [3, 6, -2, -5, 7, 3], the output should be
-adjacentElementsProduct(inputArray) = 21.
+For `inputArray = [3, 6, -2, -5, 7, 3]`, <br>the output should be `adjacentElementsProduct(inputArray) = 21`.
 
-7 and 3 produce the largest product.
+`7` and `3` produce the largest product.
