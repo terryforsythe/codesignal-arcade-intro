@@ -12,7 +12,7 @@ public class CheckPalindromeTest {
 	private String inputString;
 
 	private boolean result() {
-		return CheckPalindrome.checkPalindrome(this.inputString);
+		return CheckPalindrome.checkPalindrome(inputString);
 	}
 
 	@Test

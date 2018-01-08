@@ -1,27 +1,42 @@
 package main;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CommonCharacterCount {
 
-	public static int commonCharacterCount(String s1, String s2) {
+	public static int commonCharacterCount(String string1, String string2) {
 
-		int count = 0;
-		
-		char[] string1 = s1.toLowerCase().toCharArray();
-		StringBuilder string2 = new StringBuilder(s2.toLowerCase());
+		int commonCharacterCount = 0;
 
-		for (char string1Index : string1) {
-			for (int string2Index = 0; string2Index < string2.length(); string2Index++) {
+		// add string1 characters to ArrayList
+		List<Character> string1Characters = new ArrayList<Character>();
+		for (char character : string1.toLowerCase().toCharArray()) {
+			string1Characters.add(character);
+		}
 
-				if (string1Index == string2.charAt(string2Index)) {
-					count += 1;
-					string2.deleteCharAt(string2Index);
-					break;
+		// add string2 characters to ArrayList
+		List<Character> string2Characters = new ArrayList<Character>();
+		for (char character : string2.toLowerCase().toCharArray()) {
+			string2Characters.add(character);
+		}
+
+		// count number of common characters between the two ArrayLists
+		for (int string1Index = 0; string1Index < string1Characters.size(); string1Index++) {
+			for (int string2Index = 0; string2Index < string2Characters.size(); string2Index++) {
+
+				Character string1Character = string1Characters.get(string1Index);
+				Character string2Character = string2Characters.get(string2Index);
+				
+				if (string1Character == string2Character) {
+					string2Characters.remove(string2Index);
+					commonCharacterCount++;
 				}
 
 			}
 		}
 
-		return count;
+		return commonCharacterCount;
 
 	}
 

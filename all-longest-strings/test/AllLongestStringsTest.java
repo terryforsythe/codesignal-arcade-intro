@@ -8,23 +8,26 @@ import org.junit.Test;
 
 import main.AllLongestStrings;
 
-
 public class AllLongestStringsTest {
+
+	String[] inputArray;
+
+	private String[] result() {
+		return AllLongestStrings.allLongestStrings(inputArray);
+	}
 
 	@Test
 	public void shouldAddSameLengthStringsToArrayList() {
-		String[] inputArray = { "abc", "cde", "efg" };
+		inputArray = new String[] { "abc", "cde", "efg" };
 		String[] expected = inputArray;
-		String[] result = AllLongestStrings.allLongestStrings(inputArray);
-		assertThat(result, is(equalTo(expected)));
+		assertThat(result(), is(equalTo(expected)));
 	}
 
 	@Test
 	public void shouldReturnLongestStrings() {
-		String[] inputArray = { "abc", "efgh", "fghi", "abcdefg", "cba", "tuvwxyz" };
+		inputArray = new String[] { "abc", "efgh", "fghi", "abcdefg", "cba", "tuvwxyz" };
 		String[] expected = { "abcdefg", "tuvwxyz" };
-		String[] result = AllLongestStrings.allLongestStrings(inputArray);
-		assertThat(result, is(equalTo(expected)));
+		assertThat(result(), is(equalTo(expected)));
 	}
 
 }

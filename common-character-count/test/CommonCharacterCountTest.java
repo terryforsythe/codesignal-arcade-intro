@@ -13,7 +13,7 @@ public class CommonCharacterCountTest {
 	String string2;
 
 	private int countResult() {
-		return CommonCharacterCount.commonCharacterCount(this.string1, this.string2);
+		return CommonCharacterCount.commonCharacterCount(string1, string2);
 	}
 
 	@Test
