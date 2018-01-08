@@ -37,7 +37,5 @@ public class CommonCharacterCount {
 		}
 
 		return commonCharacterCount;
-
 	}
-
 }
