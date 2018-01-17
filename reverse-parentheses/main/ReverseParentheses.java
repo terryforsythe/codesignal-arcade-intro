@@ -14,17 +14,13 @@ public class ReverseParentheses {
 
 			if (characterToAdd.equals(leftParenthesis)) {
 
-				String twoCharactersAfterParenthesis = inputString.substring(index + 2, index + 3);
-
-				characterToAdd = twoCharactersAfterParenthesis;
+				characterToAdd = inputString.substring(index + 2, index + 3);
 				index += 2;
 			}
 
 			if (characterToAdd.equals(rightParenthesis)) {
 
-				String twoCharactersBeforeParenthesis = inputString.substring(index - 2, index - 1);
-
-				characterToAdd = twoCharactersBeforeParenthesis;
+				characterToAdd = inputString.substring(index - 2, index - 1);
 			}
 
 			outputString += characterToAdd;
