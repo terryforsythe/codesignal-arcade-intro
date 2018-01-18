@@ -25,5 +25,12 @@ public class ReverseParenthesesTest {
 		result = ReverseParentheses.reverseParentheses(inputString).substring(1, 2);
 		assertThat(result, is("x"));
 	}
+	
+	@Test
+	public void shouldReverseTwoLettersBetweenParenthesesInLongStringAndReturnWithoutParentheses() {
+		inputString = "abcdefghi(kj)lmn";
+		result = ReverseParentheses.reverseParentheses(inputString);
+		assertThat(result, is("abcdefghijklmn"));
+	}
 
 }
