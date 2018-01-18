@@ -12,24 +12,28 @@ public class ReverseParenthesesTest {
 	String inputString;
 	String result;
 
+	private String reverseParenthesesResult() {
+		return ReverseParentheses.reverseParentheses(inputString);
+	}
+	
 	@Test
 	public void shouldAddLetterTwoIndexesAfterLeftParenthesisToFirstIndexOfOutputString() {
 		inputString = "(xy)";
-		result = ReverseParentheses.reverseParentheses(inputString).substring(0, 1);
+		result = reverseParenthesesResult().substring(0, 1);
 		assertThat(result, is("y"));
 	}
 
 	@Test
 	public void shouldAddLetterTwoIndexesBeforeRightParenthesisToSecondIndexOfOutputString() {
 		inputString = "(xy)";
-		result = ReverseParentheses.reverseParentheses(inputString).substring(1, 2);
+		result = reverseParenthesesResult().substring(1, 2);
 		assertThat(result, is("x"));
 	}
 	
 	@Test
 	public void shouldReverseTwoLettersBetweenParenthesesInLongStringAndReturnWithoutParentheses() {
 		inputString = "abcdefghi(kj)lmn";
-		result = ReverseParentheses.reverseParentheses(inputString);
+		result = reverseParenthesesResult();
 		assertThat(result, is("abcdefghijklmn"));
 	}
 
